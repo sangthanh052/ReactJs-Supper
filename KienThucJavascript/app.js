@@ -58,12 +58,12 @@ function sum(...numbers) {
     return numbers.reduce((acc, curr) => acc + curr, 0);
 }
 
-console.log(sum(1, 2, 3, 4, 5)); // Outputs: 10
+console.log('sum=', sum(1, 2, 3, 4, 5)); // Outputs: 10
 
 const handle = ({ a, b, ...c }) => {
     return c
 }
 
-const values = handle({ a: 1, b: 2, c: 3, d: 4, e: 5 }) // {c: 3, d: 4, e: 5}
+const values = handle({ a: 1, b: 6, c: 3, d: 4, e: 5 }) // {c: 3, d: 4, e: 5}
  
 console.log(values);
