@@ -1,8 +1,6 @@
-import React, { handle, value as value1 } from './react.js'
+import Reactjs, { handle, value } from './react.js'
 
-const value = 200
+console.log(Reactjs)
+console.log(value)
 
-console.log(React)
-console.log(value1)
-
-handle()
+ handle()

@@ -8,3 +8,5 @@ brew install git
 ssh-keygen -t ed25519 -C "your_email@example.com"
 ## Copy the SSH public key to your clipboard.
 pbcopy < ~/.ssh/id_ed25519.pub
+## Error "Lỗi CORS (Cross-Origin)"
+open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security
