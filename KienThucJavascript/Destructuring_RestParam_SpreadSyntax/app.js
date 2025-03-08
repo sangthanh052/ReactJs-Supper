@@ -13,6 +13,7 @@ const user = {
 //     age = user.age,
 //     sex = user.sex;
 const {age, name, sex} = user;
+
 // console.log(name, age, sex);
 
 function greet({ name, age, sex }) {
@@ -67,3 +68,16 @@ const handle = ({ a, b, ...c }) => {
 const values = handle({ a: 1, b: 6, c: 3, d: 4, e: 5 }) // {c: 3, d: 4, e: 5}
  
 console.log(values);
+
+const data = [2, 4, 6, 8, 10]
+
+const reducer = data.reduce((accumulator, currentValue, currentIndex, array) => {
+    console.log(`accumulator: ${accumulator}`)
+    console.log(`currentValue: ${currentValue}`)
+    console.log(`currentIndex: ${currentIndex}`)
+    console.log(`array: ${array}`)
+    return accumulator + currentValue
+});
+
+
+console.log(`total: ${reducer}`)
