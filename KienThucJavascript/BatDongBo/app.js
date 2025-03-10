@@ -38,8 +38,8 @@ const pFunc = () => new Promise((resolve, reject) => {
 // console.log('value', value)
 
 /**
- * Async / Await
- * * await chỉ sử dụng được trong một async function
+ * Async / Await ES6 mới có 
+ * * await chỉ sử dụng được trong một async function, await phải nằm trong async
  * * Chỉ sử dụng await với promise
  */
 
@@ -50,13 +50,28 @@ const pFunc2 = () =>
     }, 0)
   })
 
+
+const handle = async () => {
+  try {
+    const value = await pFunc2()
+    console.log(value)
+  } catch (error) {
+    console.warn(error)
+  } finally {
+    console.log('Finally')
+  }
+}
+
+// dùng await nhưng ko muốn khai báo hàm mới ta dùng hàm ẩn danh ;(code)(), dùng ; để tránh một số lỗi ko đáng có
 ;(async () => {
   try {
     const value = await pFunc2()
     console.log(value)
   } catch (error) {
     console.warn(error)
-  // } finally {
-  //   console.log('Finally')
+  } finally {
+    console.log('Finally')
   }
 })()
+
+// muốn bắt lỗi promise thì dùng .catch (vì try catch chỉ bắt lỗi những câu lệnh đồng bộ), còn async/await thì dùng try, catch
